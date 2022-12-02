@@ -154,3 +154,35 @@ footer img {
   padding-top: 50px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+@media only screen and (max-width: 600px) {
+  #uibg {
+    height: 240px;
+    font-size: 15px;
+    text-align: start;
+  }
+
+  h1 {
+    font-size: 2.5vh;
+    text-align: start;
+  }
+
+  h3 {
+    font-size: 15px;
+    text-align: start;
+  }
+
+  /* #uibg-text {
+    padding: 0% 60% 5% 5%;
+  } */
+
+  body {
+    text-align: center;
+  }
+
+  #flex-container1,
+  #flex-container2,
+  #flex-container3 {
+    justify-content: center;
+  }
+}
