@@ -3,11 +3,17 @@ body {
   padding: 0;
 }
 
-/* #nav{
+#nav{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-} */
+  /* justify-content: space-around; */
+}
+
+#nav2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
 
 #logo {
   height: 28px;
@@ -26,6 +32,7 @@ body {
 #cartitems {
   font-size: 14px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-top:13px;
 }
 
 #uibg {
