@@ -6,7 +6,6 @@ body {
 #nav {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-around; */
 }
 
 #nav2 {
