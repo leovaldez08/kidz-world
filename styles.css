@@ -24,6 +24,7 @@ body {
 
 #addtocart {
   display: flex;
+  /* cursor: pointer; */
 }
 
 #cartitems {
@@ -32,11 +33,12 @@ body {
   font-weight: 900;
   padding-top: 16px;
   padding-right: 80px;
+  cursor: pointer;
 }
 
 #uibg {
   margin-top: 100px;
-  background-image: url(https://stackblitz.com/files/web-platform-gaxfvm/github/Kalvium-Program/kidz-world-html-boilerplate/main/assets/kw-background.png);
+  background-image: url(./assets/kw-background.png);
   background-repeat: no-repeat;
   height: 445px;
   background-size: 100% 88%;
@@ -81,6 +83,7 @@ h3 {
 .product {
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
 }
 
 .description {
@@ -94,6 +97,7 @@ h3 {
 .price {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+  font-weight: 900;
 }
 
 button {
@@ -103,6 +107,7 @@ button {
   background-color: rgb(69, 149, 253);
   margin: 0;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .add {
