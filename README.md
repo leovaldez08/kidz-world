@@ -1,3 +1,3 @@
 # kidz-world
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/web-platform-w16yxk)
+A Simple shopping/ E-commerce website that has whatsapp integration for getting orders from customers.
