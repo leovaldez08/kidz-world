@@ -22,7 +22,7 @@ body {
   padding-bottom: 10px;
 }
 
-#addtocart {
+#cartsection {
   display: flex;
   /* cursor: pointer; */
 }
@@ -31,7 +31,6 @@ body {
   font-size: 14px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
-  padding-top: 16px;
   padding-right: 80px;
   cursor: pointer;
 }
