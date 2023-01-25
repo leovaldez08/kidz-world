@@ -1,5 +1,5 @@
 const totalItems = document.querySelector("#total-items");
-const addButton = document.querySelectorAll(".addtocart");
+const addButtons = document.querySelectorAll(".addtocart");
 const gotoCart = document.querySelector("#cartsection");
 const items = [
     {
@@ -101,6 +101,9 @@ const items = [
     },
 ];
 
+let totalDollars = 0;
+let totalCents = 0;
+
 function updateCart() {
     let cart = 0;
     for (const item of items) {
@@ -109,16 +112,12 @@ function updateCart() {
     totalItems.innerHTML = cart;
 }
 
-for (const button of addButton) {
-    let i = 0
-    button.addEventListener('click', (e) => {
+for (let i = 0; i < addButtons.length; i++) {
+    addButtons[i].addEventListener('click', () => {
         items[i].quantity++;
         updateCart();
     });
 }
-
-let totalDollars = 0;
-let totalCents = 0;
 
 function updateTotalCost() {
     let totalCentsPrice = 0;
@@ -127,16 +126,30 @@ function updateTotalCost() {
         totalCentsPrice += item.quantity * (item.dollars * 100 + item.cents);
     }
     totalDollars = Math.floor(totalCentsPrice / 100);
-    totalCents = totalCentsPrice % 100;
+    totalCents = totalCents % 100;
+}
+
+let whatsappLink = "https://api.whatsapp.com/send?phone=919000000000&text=Order%20details";
+
+function updateWhatsappLink() {
+for (let i = 0; i < items.length; i++) {
+if (items[i].quantity != 0) {
+whatsappLink += "%0A" + items[i].name + "%20" + items[i].quantity;
+}
+}
+whatsappLink +=
+"%0A" + "Total%20Price:%20$" + totalDollars + "%20" + totalCents + "c";
 }
 
 gotoCart.addEventListener('click', () => {
-    updateTotalCost();
+updateTotalCost();
+updateWhatsappLink();
+window.open(whatsappLink, "_blank");
 
-    for (const item of items) {
-        if (item.quantity != 0) {
-            console.log(`Item Name: ${item.name} - Quantity: ${item.quantity}`);
-        }
+for (const item of items) {
+    if (item.quantity != 0) {
+        console.log(`Item Name: ${item.name} - Quantity: ${item.quantity}`);
     }
-    console.log(`The total amount is ${totalDollars}$ and ${totalCents} cents.`);
+}
+console.log(`The total amount is ${totalDollars}$ and ${totalCents} cents.`);
 });
