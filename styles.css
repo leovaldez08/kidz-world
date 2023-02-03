@@ -109,6 +109,15 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgb(21, 0, 255);
+  background-color: rgb(0, 173, 35);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
 .add {
   color: white;
   font-size: 13.5px;
